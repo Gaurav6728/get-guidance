@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Updates = () => {
   useEffect(() => {
     axios
-      .get("/api/updates")
+      .get("https://get-guidance.onrender.com/api/updates")
       .then((res) => {
         setPosts(res.data);
       })
@@ -50,7 +50,7 @@ const Updates = () => {
         },
       };
       await axios
-        .post("/api/updates", body, config)
+        .post("https://get-guidance.onrender.com/api/updates", body, config)
         .then(() => {
           toast({
             title: "Update Added Successfully",
