@@ -16,7 +16,7 @@ const Articles = () => {
   const toast = useToast();
   useEffect(() => {
     axios
-      .get("./api/articles")
+      .get("/api/articles")
       .then((res) => {
         setPosts(res.data);
       })

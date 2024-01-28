@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Updates = () => {
   useEffect(() => {
     axios
-      .get("./api/updates")
+      .get("/api/updates")
       .then((res) => {
         setPosts(res.data);
       })

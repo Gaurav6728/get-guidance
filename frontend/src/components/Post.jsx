@@ -63,7 +63,6 @@ const Post = ({ post }) => {
       await axios
         .post("/api/answers", body, config)
         .then((res) => {
-          // console.log("Data is", res.data);
           toast({
             title: "Answer Added Successfully",
             description: "Refresh the page to see changes",

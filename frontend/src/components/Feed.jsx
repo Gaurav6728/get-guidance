@@ -9,7 +9,7 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get("./api/questions")
+      .get("/api/questions")
       .then((res) => {
         setPosts(res.data);
       })
