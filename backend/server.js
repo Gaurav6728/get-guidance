@@ -20,8 +20,11 @@ app.use((req, res, next) => {
 app.use("/api", router);
 const dotenv = require("dotenv").config();
 db.connect();
-
-app.use(cors);
+var options = {
+  origin: "https://get-guidance.netlify.app/",
+  optionsSuccessStatus: 200,
+};
+app.use(cors(options));
 
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Server is running on port ${PORT}`);
